@@ -1,4 +1,4 @@
-import HeroSection from "@/components/HeroSection";
+import HeroSection from "@/components/sections/HeroSection";
 import PartnerLogos from "@/components/PartnerLogos";
 import CourseCatalog from "@/components/CourseCatalog";
 import LearningPaths from "@/components/LearningPaths";
