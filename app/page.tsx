@@ -6,7 +6,6 @@ import StudentGrowthSection from "@/components/StudentGrowthSection";
 import InstructorSection from "@/components/InstructorSection";
 import CreatorCTA from "@/components/CreatorCTA";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -34,9 +33,6 @@ export default function Home() {
 
       {/* 8. Testimonials Section */}
       <TestimonialsSection />
-
-      {/* 9. Footer */}
-      <Footer />
     </main>
   );
 }

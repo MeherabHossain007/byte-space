@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Search, Star, Laptop, ArrowRight } from "lucide-react";
-import Navbar from "./Navbar";
 import {
   LimeSpring,
   LimeCylinder,
@@ -27,44 +26,42 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#1856F3] bg-grid-pattern text-white pb-16 sm:pb-24 pt-2">
+    <section className="relative overflow-hidden bg-primary bg-grid-pattern text-white pb-16 sm:pb-24 pt-24 sm:pt-28 lg:pt-32">
       {/* Background radial glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-blue-500/25 blur-[120px] rounded-full pointer-events-none" />
 
       {/* Decorative 3D Memphis Floating Elements */}
-      <div className="absolute top-12 left-4 sm:left-12 w-16 sm:w-24 opacity-90 animate-float-slow">
+      <div className="absolute top-12 left-4 sm:left-12 w-16 sm:w-24 opacity-90 animate-float-slow pointer-events-none">
         <LimeSpring />
       </div>
-      <div className="absolute top-16 right-6 sm:right-16 w-16 sm:w-24 opacity-90 animate-float-gentle">
+      <div className="absolute top-16 right-6 sm:right-16 w-16 sm:w-24 opacity-90 animate-float-gentle pointer-events-none">
         <LimeCylinder />
       </div>
-      <div className="absolute bottom-24 left-6 sm:left-20 w-20 sm:w-28 opacity-90 animate-float-gentle">
+      <div className="absolute bottom-24 left-6 sm:left-20 w-20 sm:w-28 opacity-90 animate-float-gentle pointer-events-none">
         <WhiteTorus />
       </div>
-      <div className="absolute top-1/3 right-8 sm:right-28 w-14 sm:w-20 opacity-90 animate-float-slow">
+      <div className="absolute top-1/3 right-8 sm:right-28 w-14 sm:w-20 opacity-90 animate-float-slow pointer-events-none">
         <WhitePrism />
       </div>
-      <div className="absolute top-1/2 left-8 sm:left-24 w-12 sm:w-16 opacity-80">
+      <div className="absolute top-1/2 left-8 sm:left-24 w-12 sm:w-16 opacity-80 pointer-events-none">
         <WhiteZigzag />
       </div>
-      <div className="absolute bottom-40 right-10 sm:right-24 w-12 sm:w-16 opacity-90">
+      <div className="absolute bottom-40 right-10 sm:right-24 w-12 sm:w-16 opacity-90 pointer-events-none">
         <LimeZigzag />
       </div>
 
-      {/* Navbar */}
-      <Navbar />
-
       {/* Hero Content Container */}
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 pt-10 sm:pt-14 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-2 sm:pt-4 text-center">
         {/* Main Headline */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.12] max-w-4xl mx-auto drop-shadow-sm">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight leading-tight max-w-4xl mx-auto">
           Get Access to Hundreds <br />
           Courses Available
         </h1>
 
         {/* Subtitle */}
-        <p className="mt-4 text-sm sm:text-base md:text-lg text-blue-100 font-normal max-w-xl mx-auto">
-          ...or find your dream course and build your skills with the best instructors online
+        <p className="mt-4 text-sm sm:text-base md:text-lg text-white mx-auto">
+          Unlock your creativity, gain valuable knowledge, and grow your
+          business with our wide range of courses.
         </p>
 
         {/* Search Bar */}

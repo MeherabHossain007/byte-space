@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/shared/Navbar";
+import Footer from "@/components/shared/Footer";
 
-const inter = Inter({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-sans",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-poppins",
   display: "swap",
 });
 
@@ -19,11 +22,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} scroll-smooth`}>
-      <body className="font-sans antialiased bg-white text-zinc-900 selection:bg-lime-300 selection:text-black min-h-screen flex flex-col">
+    <html lang="en" className={`${poppins.variable} scroll-smooth`}>
+      <body className="font-body antialiased min-h-screen flex flex-col relative">
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
 }
-
