@@ -1,6 +1,6 @@
 import HeroSection from "@/components/sections/HeroSection";
 import PartnerLogos from "@/components/sections/PartnersSection";
-import CourseCatalog from "@/components/CourseCatalog";
+import CourseCatalog from "@/components/sections/CourseSection";
 import LearningPaths from "@/components/LearningPaths";
 import StudentGrowthSection from "@/components/StudentGrowthSection";
 import InstructorSection from "@/components/InstructorSection";
