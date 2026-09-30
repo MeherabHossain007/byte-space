@@ -88,13 +88,13 @@ export default function HeroSection() {
 
         {/* Hero image (person) */}
         <div className="hero-visual relative z-10 flex justify-center pb-0 px-2 sm:px-4 mt-6 sm:mt-8">
-          <div className="relative w-full max-w-85 xs:max-w-[420px] sm:max-w-xl md:max-w-2xl lg:max-w-3xl flex justify-center items-end">
+          <div className="relative w-full max-w-85 sm:max-w-xl md:max-w-2xl lg:max-w-3xl flex justify-center items-end">
             {/* Student Cutout/Portrait Image Container */}
             <Image
               src="/images/hero-image.png"
               alt="Student"
-              width={1444}
-              height={1030}
+              width={1920}
+              height={1080}
               priority
               style={{ transform: "translateX(3.2%)" }}
               className="w-full h-auto object-contain select-none pointer-events-none relative z-10"

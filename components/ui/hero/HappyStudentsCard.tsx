@@ -51,11 +51,15 @@ export default function HappyStudentsCard({
   countBadge = "2K+",
   avatars = HAPPY_STUDENT_AVATARS,
 }: HappyStudentsCardProps) {
+  const hasCustomWidth = className.includes("w-");
+
   return (
     <div
       className={`group/card select-none hover:[animation-play-state:paused] ${className}`}
     >
-      <div className="bg-white flex flex-col gap-1.5 sm:gap-2 items-start justify-center p-2.5 xs:p-3 sm:p-3.5 lg:p-4 rounded-xl sm:rounded-2xl w-46 xs:w-54 sm:w-62 lg:w-65 border border-white/80 shadow-[0_10px_30px_rgba(0,0,0,0.06)] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:scale-[1.02] hover:shadow-[0_22px_45px_-10px_rgba(0,59,226,0.18)] hover:border-primary/20 active:scale-[0.98] cursor-pointer">
+      <div className={`bg-white flex flex-col gap-1.5 sm:gap-2 items-start justify-center p-2.5 xs:p-3 sm:p-3.5 lg:p-4 rounded-xl sm:rounded-2xl ${
+        hasCustomWidth ? "w-full" : "w-46 xs:w-54 sm:w-62 lg:w-65"
+      } max-w-full border border-white/80 shadow-[0_10px_30px_rgba(0,0,0,0.06)] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:scale-[1.02] hover:shadow-[0_22px_45px_-10px_rgba(0,59,226,0.18)] hover:border-primary/20 active:scale-[0.98] cursor-pointer`}>
         <div className="flex flex-col items-start space-y-0.5 sm:space-y-1">
           <p className="font-satoshi font-medium text-footer-text text-xs xs:text-sm lg:text-base leading-tight group-hover/card:text-primary transition-colors duration-300">
             Happy Students
