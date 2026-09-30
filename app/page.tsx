@@ -1,5 +1,5 @@
 import HeroSection from "@/components/sections/HeroSection";
-import PartnerLogos from "@/components/PartnerLogos";
+import PartnerLogos from "@/components/sections/PartnersSection";
 import CourseCatalog from "@/components/CourseCatalog";
 import LearningPaths from "@/components/LearningPaths";
 import StudentGrowthSection from "@/components/StudentGrowthSection";
