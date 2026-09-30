@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { CheckCircle2, TrendingUp, DollarSign, Users, Star, ArrowRight } from "lucide-react";
-import { LimeZigzag } from "./DecorativeShapes";
 import Link from "next/link";
 
 export default function InstructorSection() {
@@ -19,11 +18,6 @@ export default function InstructorSection() {
           <div className="lg:col-span-6 relative flex justify-center items-center order-2 lg:order-1">
             {/* Ambient Glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-lime-300/20 blur-[90px] rounded-full -z-10" />
-
-            {/* Lime Zigzag Doodle */}
-            <div className="absolute top-4 -right-2 sm:right-6 w-16 sm:w-20 opacity-90 animate-float-slow -z-10">
-              <LimeZigzag />
-            </div>
 
             {/* Central Instructor Image Card */}
             <div className="relative w-[280px] sm:w-[350px] h-[360px] sm:h-[440px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-50">

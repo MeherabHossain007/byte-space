@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { LimeSpring } from "./DecorativeShapes";
 import { Star, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -66,10 +65,6 @@ export default function StudentGrowthSection() {
           <div className="lg:col-span-6 relative flex justify-center items-center">
             {/* Ambient Background Glow & Lime Spring */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 sm:w-96 sm:h-96 bg-blue-400/10 blur-[80px] rounded-full -z-10" />
-
-            <div className="absolute -top-6 -right-2 sm:right-6 w-20 sm:w-24 opacity-90 animate-float-slow -z-10">
-              <LimeSpring />
-            </div>
 
             {/* Central Student Image Container */}
             <div className="relative w-[280px] sm:w-[360px] h-[340px] sm:h-[420px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100">
