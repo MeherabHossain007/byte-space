@@ -116,6 +116,7 @@ function CreatorIllustration() {
 export default function StudentGrowthSection() {
   return (
     <section
+      id="creators"
       aria-label="Student Growth and Course Creation"
       className="min-h-svh overflow-hidden bg-background font-body text-foreground bg-student-growth-radial"
     >
