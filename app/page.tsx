@@ -3,8 +3,8 @@ import PartnerLogos from "@/components/sections/PartnersSection";
 import CourseCatalog from "@/components/sections/CourseSection";
 import LearningPaths from "@/components/sections/LearningPathsSection";
 import StudentGrowthSection from "@/components/sections/StudentGrowthSection";
-import CreatorCTA from "@/components/CreatorCTA";
-import TestimonialsSection from "@/components/TestimonialsSection";
+import CreatorCTA from "@/components/sections/CreatorCTA";
+import TestimonialsSection from "@/components/sections/TestimonialsSection";
 
 export default function Home() {
   return (

@@ -28,7 +28,7 @@ export default function HeroSection() {
       aria-label="Hero Section"
     >
       {/* 1440px Centered Stage Wrapper */}
-      <div className="relative w-full max-w-360 mx-auto overflow-hidden">
+      <div className="relative w-full max-w-360 mx-auto overflow-hidden 2xl:overflow-visible">
         {/* Ellipse 7 (Lime Circle Backdrop from Figma) */}
         <div className="absolute -bottom-16 sm:-bottom-24 lg:-bottom-30 left-1/2 -translate-x-1/2 w-[140vw] max-w-125 sm:max-w-187.5 lg:max-w-none sm:w-240 lg:w-287.25 aspect-square pointer-events-none select-none z-0 translate-y-[49%]">
           <Image
