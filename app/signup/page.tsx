@@ -7,6 +7,7 @@ import AuthCardCluster from "@/components/ui/cards/AuthCardCluster";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 import Input from "@/components/ui/Input";
+import { validateSignupForm } from "@/lib/utils";
 
 export default function SignupPage() {
   const router = useRouter();
@@ -18,10 +19,12 @@ export default function SignupPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!fullName || !email || !password) {
-      setErrorMessage("Please fill in all fields.");
+    const validation = validateSignupForm({ fullName, email, password });
+    if (!validation.isValid) {
+      setErrorMessage(validation.error || "Please fill in all fields.");
       return;
     }
+    setErrorMessage("");
 
     setIsLoading(true);
     setTimeout(() => {

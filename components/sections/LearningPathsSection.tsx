@@ -1,37 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
-interface LearningPath {
-  name: string;
-  icon: string;
-}
-
-const LEARNING_PATHS: readonly LearningPath[] = [
-  {
-    name: "Design",
-    icon: "/icons/design.svg",
-  },
-  {
-    name: "Development",
-    icon: "/icons/development.svg",
-  },
-  {
-    name: "IT & Software",
-    icon: "/icons/laptop.svg",
-  },
-  {
-    name: "Business",
-    icon: "/icons/business.svg",
-  },
-  {
-    name: "Marketing",
-    icon: "/icons/marketing.svg",
-  },
-  {
-    name: "Photography",
-    icon: "/icons/photography.svg",
-  },
-] as const;
+import { LEARNING_PATHS } from "@/lib/constants";
 
 export default function LearningPaths() {
   return (

@@ -33,10 +33,10 @@ function LearningIllustration() {
       </div>
 
       <img
-        src="/images/hero-image.png"
-        alt="A smiling student wearing headphones and holding a laptop"
+          src="/images/hero-image.png"
+          alt="A smiling student wearing headphones and holding a laptop"
         className="pointer-events-none absolute left-0 top-[1.932cqw] h-[86.957cqw] w-[92.915cqw] object-cover drop-shadow-[4.1cqw_5.9cqw_4.5cqw_rgba(0,0,0,0.3)] z-30"
-      />
+        />
       <div className="pointer-events-none absolute left-[55.556cqw] top-[36cqw] flex  flex-col gap-[1.288cqw] rounded-[2.577cqw] z-40">
         <LearningProgressCard progress={55} />
       </div>

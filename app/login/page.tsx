@@ -7,6 +7,7 @@ import AuthCardCluster from "@/components/ui/cards/AuthCardCluster";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 import Input from "@/components/ui/Input";
+import { validateLoginForm } from "@/lib/utils";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -17,10 +18,12 @@ export default function LoginPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email || !password) {
-      setErrorMessage("Please enter both email and password.");
+    const validation = validateLoginForm({ email, password });
+    if (!validation.isValid) {
+      setErrorMessage(validation.error || "Please enter valid credentials.");
       return;
     }
+    setErrorMessage("");
 
     setIsLoading(true);
     setTimeout(() => {

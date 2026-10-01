@@ -6,69 +6,29 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Input from "@/components/ui/Input";
 import Button from "@/components/ui/Button";
-
-interface FooterLink {
-  label: string;
-  href: string;
-}
-
-interface FooterColumn {
-  links: FooterLink[];
-}
-
-const FOOTER_COLUMNS: FooterColumn[] = [
-  {
-    links: [
-      { label: "Featured Courses", href: "#courses" },
-      { label: "Featured Categories", href: "#courses" },
-      { label: "Business", href: "#courses" },
-      { label: "IT", href: "#courses" },
-      { label: "Design", href: "#courses" },
-    ],
-  },
-  {
-    links: [
-      { label: "Development", href: "#courses" },
-      { label: "Marketing", href: "#courses" },
-      { label: "Photography", href: "#courses" },
-      { label: "Finance", href: "#courses" },
-      { label: "Sport", href: "#courses" },
-    ],
-  },
-  {
-    links: [
-      { label: "Become a Creator", href: "#creators" },
-      { label: "Affiliate Program", href: "#" },
-      { label: "Contact", href: "#" },
-      { label: "Help", href: "#" },
-      { label: "About", href: "#about" },
-    ],
-  },
-];
-
-const LEGAL_LINKS: FooterLink[] = [
-  { label: "Privacy Policy", href: "#" },
-  { label: "Terms of Service", href: "#" },
-  { label: "Cookies Settings", href: "#" },
-];
+import { FOOTER_COLUMNS, LEGAL_LINKS } from "@/lib/constants";
+import { isValidEmail } from "@/lib/utils/validation";
 
 export default function Footer() {
   const pathname = usePathname();
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
 
   if (pathname === "/login" || pathname === "/signup") {
     return null;
   }
 
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (email.trim()) {
-      setSubmitted(true);
-      setEmail("");
-      setTimeout(() => setSubmitted(false), 3000);
+    if (!isValidEmail(email)) {
+      setError("Please enter a valid email address.");
+      return;
     }
+    setError("");
+    setSubmitted(true);
+    setEmail("");
+    setTimeout(() => setSubmitted(false), 3000);
   };
 
   return (
@@ -120,6 +80,9 @@ export default function Footer() {
                   {submitted ? "Subscribed" : "Search"}
                 </Button>
               </div>
+              {error && (
+                <p className="text-xs text-error mt-1.5 font-medium">{error}</p>
+              )}
 
               {/* Legal Notice */}
               <p className="text-xs text-muted mt-3 leading-relaxed max-w-md">

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { MdSignalCellularAlt, MdStar } from "react-icons/md";
+import { COURSE_AVATARS } from "@/lib/constants";
 
 export interface CourseCardProps {
   thumb: string;
@@ -13,16 +14,9 @@ export interface CourseCardProps {
   duration?: string;
   commentsCount?: string;
   studentsCount?: string;
-  avatars?: string[];
+  avatars?: readonly string[];
   className?: string;
 }
-
-const DEFAULT_AVATARS = [
-  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64&q=80",
-  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=64&h=64&q=80",
-  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=64&h=64&q=80",
-  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=64&h=64&q=80",
-];
 
 export default function CourseCard({
   thumb,
@@ -36,7 +30,7 @@ export default function CourseCard({
   duration = "2 hours 16 mins",
   commentsCount = "59 Comments",
   studentsCount = "26+",
-  avatars = DEFAULT_AVATARS,
+  avatars = COURSE_AVATARS,
   className = "",
 }: CourseCardProps) {
   const tags = [lessonsCount, duration, commentsCount];
@@ -107,14 +101,13 @@ export default function CourseCard({
 
           <div className="flex items-center">
             {avatars.slice(0, 4).map((src, i) => (
-              <img
+              <Image
                 key={i}
                 alt={`Learner ${i + 1}`}
                 className="-mr-2 size-8 rounded-full border-2 border-card object-cover shrink-0"
                 src={src}
-                width="32"
-                height="32"
-                loading="lazy"
+                width={32}
+                height={32}
               />
             ))}
             <div className="relative size-8 rounded-full border-2 border-card bg-secondary flex items-center justify-center shrink-0">

@@ -1,22 +1,6 @@
 import Image from "next/image";
 import { MdStar, MdSignalCellularAlt } from "react-icons/md";
-
-const COURSE_AVATARS = [
-  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64&q=80",
-  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=64&h=64&q=80",
-  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=64&h=64&q=80",
-  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=64&h=64&q=80",
-];
-
-const HAPPY_STUDENT_AVATARS = [
-  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&h=80&q=80",
-  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&h=80&q=80",
-  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&h=80&q=80",
-  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&h=80&q=80",
-  "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=80&h=80&q=80",
-  "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=80&h=80&q=80",
-  "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=80&h=80&q=80",
-];
+import { COURSE_AVATARS, HAPPY_STUDENT_AVATARS } from "@/lib/constants";
 
 export default function AuthCardCluster() {
   return (
@@ -62,10 +46,12 @@ export default function AuthCardCluster() {
             </div>
             <div className="flex items-center">
               {COURSE_AVATARS.map((src, i) => (
-                <img
+                <Image
                   key={i}
                   src={src}
-                  alt=""
+                  alt={`Learner ${i + 1}`}
+                  width={32}
+                  height={32}
                   className="mr-[-1.6cqw] size-[6.4cqw] rounded-full border-1.5 border-card object-cover"
                 />
               ))}
@@ -128,10 +114,12 @@ export default function AuthCardCluster() {
             </div>
             <div className="flex items-center">
               {COURSE_AVATARS.map((src, i) => (
-                <img
+                <Image
                   key={i}
                   src={src}
-                  alt=""
+                  alt={`Learner ${i + 1}`}
+                  width={32}
+                  height={32}
                   className="mr-[-1.6cqw] size-[6.4cqw] rounded-full border-1.5 border-card object-cover"
                 />
               ))}
@@ -164,11 +152,13 @@ export default function AuthCardCluster() {
           </div>
         </div>
         <div className="flex items-center">
-          {HAPPY_STUDENT_AVATARS.map((src, i) => (
-            <img
+          {HAPPY_STUDENT_AVATARS.map((student, i) => (
+            <Image
               key={i}
-              src={src}
-              alt=""
+              src={student.src}
+              alt={student.alt}
+              width={40}
+              height={40}
               className="mr-[-2.8cqw] size-[8.2cqw] rounded-full border-1.5 border-secondary object-cover"
             />
           ))}
@@ -183,9 +173,10 @@ export default function AuthCardCluster() {
         aria-hidden="true"
         className="pointer-events-none absolute left-[5.8%] top-[2.69%] z-20 aspect-square w-[29.2%]"
       >
-        <img
+        <Image
           src="/shapes/shape-cone.png"
           alt=""
+          fill
           className="size-full object-contain"
         />
         <div
@@ -208,9 +199,10 @@ export default function AuthCardCluster() {
         aria-hidden="true"
         className="pointer-events-none absolute left-[-5%] top-[71.15%] z-20 aspect-square w-[37.6%]"
       >
-        <img
+        <Image
           src="/shapes/shape-rectangle-white.png"
           alt=""
+          fill
           className="size-full object-contain rotate-180"
         />
         <div
@@ -233,9 +225,10 @@ export default function AuthCardCluster() {
         aria-hidden="true"
         className="pointer-events-none absolute left-[69.6%] top-[57.6%] z-30 aspect-square w-[35%] drop-shadow-xl"
       >
-        <img
+        <Image
           src="/shapes/shape-spiral-white.png"
           alt=""
+          fill
           className="size-full object-contain"
         />
       </div>
