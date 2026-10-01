@@ -4,17 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-interface NavItem {
-  label: string;
-  href: string;
-}
-
-const NAV_LINKS: NavItem[] = [
-  { label: "Home", href: "/" },
-  { label: "Courses", href: "#courses" },
-  { label: "Creators", href: "#creators" },
-];
+import { NAV_LINKS } from "@/lib/constants";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);

@@ -1,47 +1,16 @@
+import Image from "next/image";
 import { Star } from "lucide-react";
+import { HAPPY_STUDENT_AVATARS, StudentAvatar } from "@/lib/constants";
 
-export interface StudentAvatar {
-  src: string;
-  alt: string;
-}
-
-export const HAPPY_STUDENT_AVATARS: StudentAvatar[] = [
-  {
-    src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&h=80&q=80",
-    alt: "Happy learner Sarah",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&h=80&q=80",
-    alt: "Happy learner David",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&h=80&q=80",
-    alt: "Happy learner Emily",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&h=80&q=80",
-    alt: "Happy learner Alex",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=80&h=80&q=80",
-    alt: "Happy learner Michael",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=80&h=80&q=80",
-    alt: "Happy learner Lisa",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=80&h=80&q=80",
-    alt: "Happy learner James",
-  },
-];
+export type { StudentAvatar };
+export { HAPPY_STUDENT_AVATARS };
 
 interface HappyStudentsCardProps {
   className?: string;
   rating?: string;
   reviewCount?: number;
   countBadge?: string;
-  avatars?: StudentAvatar[];
+  avatars?: readonly StudentAvatar[];
 }
 
 export default function HappyStudentsCard({
@@ -75,14 +44,13 @@ export default function HappyStudentsCard({
         </div>
         <div className="flex items-start pt-0.5 sm:pt-1">
           {avatars.map((avatar, i) => (
-            <img
+            <Image
               key={i}
               alt={avatar.alt}
               src={avatar.src}
               className="size-6.5 xs:size-7.5 sm:size-9 lg:size-10.75 -mr-2 xs:-mr-2.5 sm:-mr-3.5 lg:-mr-4 rounded-full border-1.5 sm:border-2 border-card object-cover shrink-0 transition-all duration-200 ease-out hover:scale-125 hover:z-30 hover:-translate-y-1 hover:shadow-lg hover:ring-2 hover:ring-secondary cursor-pointer"
-              width="43"
-              height="43"
-              loading="lazy"
+              width={43}
+              height={43}
             />
           ))}
           <div className="relative size-6.5 xs:size-7.5 sm:size-9 lg:size-10.75 rounded-full border-1.5 sm:border-2 border-card bg-secondary flex items-center justify-center shrink-0 transition-all duration-200 ease-out hover:scale-125 hover:z-30 hover:-translate-y-1 hover:shadow-lg cursor-pointer">
