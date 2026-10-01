@@ -6,10 +6,10 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const variantStyles: Record<string, string> = {
-  primary: "bg-primary text-white hover:bg-primary-dark shadow-md",
-  secondary: "bg-secondary hover:bg-secondary-hover text-black",
-  outline: "border border-white/20 text-white hover:bg-white/10",
-  ghost: "text-white hover:bg-white/10",
+  primary: "bg-primary text-primary-foreground hover:bg-primary-dark shadow-md",
+  secondary: "bg-secondary hover:bg-secondary-hover text-secondary-foreground",
+  outline: "border border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10",
+  ghost: "text-primary-foreground hover:bg-primary-foreground/10",
 };
 
 const sizeStyles: Record<string, string> = {

@@ -35,7 +35,7 @@ export default function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="relative overflow-hidden py-16 sm:py-24 lg:py-28 w-full bg-white"
+      className="relative overflow-hidden py-16 sm:py-24 lg:py-28 w-full bg-background"
       aria-label="Testimonials"
     >
       {/* Background with Ambient Glow Orbs */}
@@ -59,7 +59,7 @@ export default function TestimonialsSection() {
             </h2>
           </div>
           <div>
-            <p className="font-satoshi text-[#4F4F4F] font-normal text-sm sm:text-base leading-relaxed max-w-xl">
+            <p className="font-satoshi text-text-muted font-normal text-sm sm:text-base leading-relaxed max-w-xl">
               At ByteSpace, our vibrant community of learners and creators is at
               the heart of what we do. Hear directly from those who have
               experienced the transformative journey of learning and creating on
@@ -74,7 +74,7 @@ export default function TestimonialsSection() {
           {TESTIMONIALS.map((t) => (
             <div
               key={t.name}
-              className="bg-white rounded-3xl p-7 sm:p-8 flex flex-col items-start text-left shadow-[0_4px_30px_rgba(0,0,0,0.03)] border border-black/4 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+              className="bg-card rounded-3xl p-7 sm:p-8 flex flex-col items-start text-left shadow-[0_4px_30px_rgba(0,0,0,0.03)] border border-card-border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
               {/* Circular Avatar */}
               <div className="relative size-16 sm:size-18 rounded-full overflow-hidden shrink-0">
@@ -87,7 +87,7 @@ export default function TestimonialsSection() {
               </div>
 
               {/* Name & Role */}
-              <h3 className="font-heading font-semibold text-zinc-950 text-lg sm:text-xl mt-5 sm:mt-6 leading-tight">
+              <h3 className="font-heading font-semibold text-heading text-lg sm:text-xl mt-5 sm:mt-6 leading-tight">
                 {t.name}
               </h3>
               <p className="font-satoshi font-normal text-primary text-sm sm:text-[15px] mt-1.5 leading-tight">
@@ -95,7 +95,7 @@ export default function TestimonialsSection() {
               </p>
 
               {/* Quote */}
-              <p className="font-satoshi text-zinc-500 font-normal text-sm sm:text-[15px] leading-relaxed mt-5 sm:mt-6">
+              <p className="font-satoshi text-muted font-normal text-sm sm:text-[15px] leading-relaxed mt-5 sm:mt-6">
                 &ldquo;{t.quote}&rdquo;
               </p>
             </div>

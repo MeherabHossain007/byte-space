@@ -24,7 +24,7 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative overflow-hidden bg-primary bg-grid-pattern text-white pb-0 pt-16 sm:pt-20 lg:pt-24"
+      className="relative overflow-hidden bg-primary bg-grid-pattern text-primary-foreground pb-0 pt-16 sm:pt-20 lg:pt-24"
       aria-label="Hero Section"
     >
       {/* 1440px Centered Stage Wrapper */}
@@ -55,10 +55,10 @@ export default function HeroSection() {
         {/* Hero content */}
         <div className="hero-content relative z-10 flex flex-col items-center text-center px-4 pt-4 sm:pt-8 lg:pt-12 gap-6 sm:gap-10 lg:gap-14 w-full max-w-7xl mx-auto">
           <div className="w-full flex flex-col justify-center items-center text-center gap-4 sm:gap-6 lg:gap-8 mx-auto">
-            <h1 className="font-heading font-bold text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.15] sm:leading-tight tracking-tight w-full max-w-4xl text-center mx-auto">
+            <h1 className="font-heading font-bold text-primary-foreground text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.15] sm:leading-tight tracking-tight w-full max-w-4xl text-center mx-auto">
               Get Access to Hundreds <br className="hidden sm:inline" /> Courses Available
             </h1>
-            <p className="font-satoshi font-normal text-zinc-200 text-sm sm:text-base lg:text-lg leading-relaxed w-full max-w-xl sm:max-w-3xl lg:max-w-4xl text-center mx-auto px-2">
+            <p className="font-satoshi font-normal text-hero-muted text-sm sm:text-base lg:text-lg leading-relaxed w-full max-w-xl sm:max-w-3xl lg:max-w-4xl text-center mx-auto px-2">
               Unlock your creativity, gain valuable knowledge, and grow your
               business with our wide range of courses.
             </p>

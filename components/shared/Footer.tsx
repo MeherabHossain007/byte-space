@@ -93,7 +93,7 @@ export default function Footer() {
             </Link>
 
             {/* Subtitle */}
-            <p className="text-sm text-zinc-600 leading-relaxed max-w-md">
+            <p className="text-sm text-muted-foreground leading-relaxed max-w-md">
               Stay Up to date with our latest features and releases by joining
               our newsletter.
             </p>
@@ -107,22 +107,22 @@ export default function Footer() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
                   required
-                  className="w-full bg-white border border-zinc-200 rounded-full px-5 py-3 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                  className="w-full bg-input border border-input-border rounded-full px-5 py-3 text-sm text-heading placeholder:text-input-placeholder focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                 />
                 <button
                   type="submit"
-                  className="bg-secondary hover:bg-secondary-hover active:scale-95 text-zinc-950 font-bold px-8 py-3 rounded-full text-sm transition-all shadow-xs shrink-0 cursor-pointer text-center"
+                  className="bg-secondary hover:bg-secondary-hover active:scale-95 text-secondary-foreground font-bold px-8 py-3 rounded-full text-sm transition-all shadow-xs shrink-0 cursor-pointer text-center"
                 >
                   {submitted ? "Subscribed" : "Search"}
                 </button>
               </div>
 
               {/* Legal Notice */}
-              <p className="text-xs text-zinc-500 mt-3 leading-relaxed max-w-md">
+              <p className="text-xs text-muted mt-3 leading-relaxed max-w-md">
                 By subscribing, you agree to our{" "}
                 <Link
                   href="#"
-                  className="underline hover:text-zinc-900 transition-colors"
+                  className="underline hover:text-heading transition-colors"
                 >
                   Privacy Policy
                 </Link>{" "}
@@ -139,7 +139,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm text-zinc-800 hover:text-primary transition-colors block"
+                      className="text-sm text-body hover:text-primary transition-colors block"
                     >
                       {link.label}
                     </Link>
@@ -151,7 +151,7 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-zinc-200 mt-16 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-zinc-600">
+        <div className="border-t border-border mt-16 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-muted-foreground">
           <p>@ {new Date().getFullYear()} ByteSpace. All rights reserved.</p>
 
           <div className="flex items-center gap-6 sm:gap-8">
