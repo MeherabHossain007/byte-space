@@ -318,7 +318,7 @@
     box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.4);
     z-index: 50;
   }
-  .mobile-menu a {
+  .mobile-menu a:not(.bg-secondary) {
     color: var(--nav-text);
     font-size: 1.05rem;
     font-weight: 500;
@@ -326,7 +326,7 @@
     transition: color 0.15s ease;
     cursor: pointer;
   }
-  .mobile-menu a:hover {
+  .mobile-menu a:not(.bg-secondary):hover {
     color: var(--secondary);
   }
 }

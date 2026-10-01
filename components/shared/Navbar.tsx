@@ -60,15 +60,16 @@ export default function Navbar() {
         {/* Center Desktop Navigation Links */}
         <div className="hidden md:flex gap-6 items-center">
           {NAV_LINKS.map((item) => {
-            const isHome = item.href === "/" && pathname === "/";
+            const isActive =
+              item.href === "/" ? pathname === "/" : pathname === item.href;
             return (
               <Link
                 key={item.label}
                 href={item.href}
-                className={`font-satoshi text-base transition-colors duration-150 relative py-1 ${
-                  isHome
-                    ? "text-nav-text font-medium"
-                    : "text-nav-text hover:text-secondary font-normal"
+                className={`font-satoshi text-base inline-block transition-all duration-100 relative py-1 ${
+                  isActive
+                    ? "text-nav-text font-medium leading-[1.2] -translate-y-1 hover:translate-y-0"
+                    : "text-nav-text hover:font-medium font-normal leading-[1.6] hover:-translate-y-1"
                 }`}
               >
                 {item.label}
@@ -157,7 +158,7 @@ export default function Navbar() {
                 <Link
                   href="/signup"
                   onClick={() => setMenuOpen(false)}
-                  className="bg-secondary hover:bg-secondary-hover text-secondary-foreground font-satoshi font-bold px-5 py-2.5 rounded-full text-center transition-colors text-base mt-1"
+                  className="bg-secondary hover:bg-secondary-hover text-foreground! font-satoshi font-bold px-5 py-2.5 rounded-full text-center transition-colors text-base mt-1"
                 >
                   Join Us
                 </Link>
