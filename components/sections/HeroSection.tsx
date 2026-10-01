@@ -41,7 +41,7 @@ export default function HeroSection() {
         </div>
 
         {/* 3D Memphis Decorative Ornaments from Figma */}
-        <div className="absolute bottom-6 sm:bottom-16 lg:bottom-30 left-1/2 -translate-x-1/2 w-[160%] sm:w-[130%] lg:w-full min-w-125 sm:min-w-200 lg:min-w-0 pointer-events-none select-none z-0">
+        <div className="hidden md:block absolute bottom-6 sm:bottom-16 lg:bottom-30 left-1/2 -translate-x-1/2 w-[160%] sm:w-[130%] lg:w-full min-w-125 sm:min-w-200 lg:min-w-0 pointer-events-none select-none z-0">
           <Image
             src="/images/3d ornament.png"
             alt="ByteSpace 3D Decorative Ornaments"
@@ -105,9 +105,9 @@ export default function HeroSection() {
               className="h-auto max-w-full object-contain select-none pointer-events-none relative z-10"
             />
 
-            <LearningProgressCard className="absolute top-[12%] sm:top-[14%] lg:top-[17%] -right-4 sm:-right-8 lg:-right-12 z-20" />
-            <HappyStudentsCard className="absolute bottom-[2%] sm:bottom-[6%] lg:bottom-[10%] -left-4 sm:-left-8 lg:-left-12 z-20" />
-            <UiUxDesignCard className="absolute top-[6%] sm:top-[14%] lg:top-[20%] -left-2 sm:-left-6 lg:-left-8 z-20" />
+            <LearningProgressCard className="absolute top-[12%] lg:top-[17%] right-4 lg:-right-12 z-20" />
+            <HappyStudentsCard className="absolute bottom-[5%] lg:bottom-[10%] left-4 lg:-left-12 z-20" />
+            <UiUxDesignCard className="absolute top-[6%] lg:top-[20%] left-2 lg:-left-8 z-20" />
           </div>
         </div>
       </div>
