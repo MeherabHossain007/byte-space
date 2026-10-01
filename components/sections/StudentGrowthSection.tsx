@@ -57,7 +57,7 @@ function CreatorIllustration() {
       className="@container relative aspect-541/596 w-full"
       aria-label="Course creator revenue and student community"
     >
-      <div className="absolute left-0 top-[8.133cqw] flex w-[42.884cqw] flex-col gap-[1.479cqw] rounded-[2.958cqw] bg-primary p-[2.958cqw] text-[#f5f5f6]">
+      <div className="absolute left-0 top-[8.133cqw] flex w-[42.884cqw] flex-col gap-[1.479cqw] rounded-[2.958cqw] bg-primary p-[2.958cqw] text-nav-text">
         <div>
           <p className="font-body-medium text-[2.957cqw] leading-[1.2]">
             Total Revenue
@@ -68,7 +68,7 @@ function CreatorIllustration() {
           <p className="font-heading text-[4.436cqw] leading-[5.915cqw] tracking-[-0.24px]">
             $120.29
           </p>
-          <span className="rounded-full bg-[#cbfc01] px-[1.479cqw] py-[0.37cqw] font-body-medium text-[1.848cqw] leading-[3.697cqw] text-foreground">
+          <span className="rounded-full bg-secondary px-[1.479cqw] py-[0.37cqw] font-body-medium text-[1.848cqw] leading-[3.697cqw] text-foreground">
             +12$
           </span>
         </div>
@@ -76,7 +76,7 @@ function CreatorIllustration() {
           <div className="h-full w-[56%] rounded-full bg-secondary" />
         </div>
       </div>
-      <div className="absolute left-0 top-[35.86cqw] flex w-[24.769cqw] flex-col items-start gap-[1.479cqw] rounded-[2.958cqw] bg-primary p-[2.958cqw] text-[#f5f5f6]">
+      <div className="absolute left-0 top-[35.86cqw] flex w-[24.769cqw] flex-col items-start gap-[1.479cqw] rounded-[2.958cqw] bg-primary p-[2.958cqw] text-nav-text">
         <div>
           <p className="font-body-medium text-[2.957cqw] leading-[1.2]">
             Year to Date
@@ -117,7 +117,7 @@ export default function StudentGrowthSection() {
   return (
     <section
       aria-label="Student Growth and Course Creation"
-      className="min-h-svh overflow-hidden bg-background font-body text-foreground bg-[radial-gradient(ellipse_29%_25%_at_29%_7%,#e9fba8_0%,#edf9c866_48%,transparent_100%),radial-gradient(ellipse_27%_25%_at_96%_7%,#e7eaf6_0%,#e7eaf666_48%,transparent_100%),radial-gradient(ellipse_30%_30%_at_5%_52%,#d7dff5_0%,#d7dff566_48%,transparent_100%),radial-gradient(ellipse_20%_24%_at_3%_85%,#deff68_0%,#e5fba066_48%,transparent_100%),radial-gradient(ellipse_30%_29%_at_90%_93%,#ccd7f6_0%,#dbe2f666_48%,transparent_100%)]"
+      className="min-h-svh overflow-hidden bg-background font-body text-foreground bg-student-growth-radial"
     >
       <div className="relative isolate mx-auto min-h-svh max-w-360 pb-20 md:min-h-[min(101.389vw,1460px)] md:pb-[8.333%]">
         <div className="mx-6 flex flex-col gap-16 pt-14 sm:mx-10 md:ml-[8.403%] md:mr-[4.236%] md:gap-[min(5vw,72px)] 2xl:mx-0 md:pt-[8.333%]">
@@ -129,12 +129,12 @@ export default function StudentGrowthSection() {
             <div className="flex flex-col items-start gap-6 sm:gap-7 md:gap-8 max-w-xl">
               <h2
                 id="growth-title"
-                className="font-heading font-semibold text-zinc-950 text-3xl sm:text-4xl lg:text-[44px] leading-[1.18] tracking-tight"
+                className="font-heading font-semibold text-heading text-3xl sm:text-4xl lg:text-[44px] leading-[1.18] tracking-tight"
               >
                 Your Path to Professional <br className="hidden sm:inline" />
                 Growth Starts Here!
               </h2>
-              <p className="max-w-120 text-zinc-500 font-satoshi font-normal text-sm sm:text-base leading-relaxed">
+              <p className="max-w-120 text-muted font-satoshi font-normal text-sm sm:text-base leading-relaxed">
                 Explore our curated selection of courses tailored to enhance
                 your capabilities and accelerate your career journey. Whether
                 you are looking to sharpen specific skills, gain industry
@@ -147,7 +147,7 @@ export default function StudentGrowthSection() {
                     <dt className="font-heading font-medium text-3xl sm:text-4xl text-primary leading-tight tracking-tight">
                       {value}
                     </dt>
-                    <dd className="font-satoshi text-zinc-500 text-sm sm:text-base leading-tight mt-1">
+                    <dd className="font-satoshi text-muted text-sm sm:text-base leading-tight mt-1">
                       {label}
                     </dd>
                   </div>
@@ -168,13 +168,13 @@ export default function StudentGrowthSection() {
             <div className="order-1 flex flex-col items-start gap-6 sm:gap-7 md:order-2 md:gap-8 max-w-xl">
               <h2
                 id="creator-title"
-                className="font-heading font-semibold text-zinc-950 text-3xl sm:text-4xl lg:text-[44px] leading-[1.18] tracking-tight"
+                className="font-heading font-semibold text-heading text-3xl sm:text-4xl lg:text-[44px] leading-[1.18] tracking-tight"
               >
                 Create &amp; Manage <br className="hidden sm:inline" />
                 Courses Easily.
               </h2>
-              <p className="max-w-120 text-zinc-500 font-satoshi font-normal text-sm sm:text-base leading-relaxed">
-                <strong className="font-bold text-zinc-950">ByteSpace</strong>{" "}
+              <p className="max-w-120 text-muted font-satoshi font-normal text-sm sm:text-base leading-relaxed">
+                <strong className="font-bold text-heading">ByteSpace</strong>{" "}
                 supports individuals or entities in the creation, publication,
                 and administration of educational courses.
               </p>
@@ -182,7 +182,7 @@ export default function StudentGrowthSection() {
                 {benefits.map((benefit) => (
                   <li
                     key={benefit}
-                    className="flex items-center gap-3 font-satoshi font-medium text-zinc-900 text-sm sm:text-base leading-tight"
+                    className="flex items-center gap-3 font-satoshi font-medium text-body text-sm sm:text-base leading-tight"
                   >
                     <Image
                       src="/icons/correct-filled.svg"

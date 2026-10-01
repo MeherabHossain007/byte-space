@@ -8,7 +8,7 @@ import TestimonialsSection from "@/components/sections/TestimonialsSection";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col bg-white">
+    <main className="min-h-screen flex flex-col bg-background">
       {/* 1. Hero Section */}
       <HeroSection />
 

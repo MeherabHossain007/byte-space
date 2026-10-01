@@ -157,17 +157,17 @@ export default function CourseCatalog() {
   return (
     <section
       id="courses"
-      className="discover-section bg-white py-16 sm:py-20 lg:py-24 px-6 sm:px-12 lg:px-30 overflow-hidden"
+      className="discover-section bg-background py-16 sm:py-20 lg:py-24 px-6 sm:px-12 lg:px-30 overflow-hidden"
       aria-label="Discover Courses"
     >
       <div className="max-w-360 mx-auto w-full">
         {/* Section Header */}
         <div className="max-w-4xl mx-auto flex flex-col items-center text-center gap-3 sm:gap-4 mb-10 sm:mb-12">
-          <h2 className="font-heading font-semibold text-zinc-950 text-3xl sm:text-4xl lg:text-5xl leading-tight tracking-tight max-w-xl mx-auto">
+          <h2 className="font-heading font-semibold text-heading text-3xl sm:text-4xl lg:text-5xl leading-tight tracking-tight max-w-xl mx-auto">
             Discover Your Passion, <br className="hidden sm:inline" />
             Build Your Skills
           </h2>
-          <p className="font-satoshi font-normal text-zinc-500 text-sm sm:text-base lg:text-lg leading-relaxed max-w-3xl mx-auto px-2">
+          <p className="font-satoshi font-normal text-muted text-sm sm:text-base lg:text-lg leading-relaxed max-w-3xl mx-auto px-2">
             At Bytespace Courses, we bring you closer to life-changing knowledge.
             Explore a variety of courses across different fields, from technology
             to the arts, and make a difference in your career and life.
@@ -190,8 +190,8 @@ export default function CourseCatalog() {
                     onClick={() => setActiveCategory(category)}
                     className={`flex items-center justify-center px-4 py-2 sm:py-2.5 rounded-full cursor-pointer transition-all duration-200 select-none text-xs sm:text-sm font-medium ${
                       isActive
-                        ? "bg-secondary text-zinc-900 shadow-xs scale-102"
-                        : "bg-zinc-100 hover:bg-zinc-200/80 text-zinc-600"
+                        ? "bg-secondary text-secondary-foreground shadow-xs scale-102"
+                        : "bg-surface hover:bg-surface-hover text-muted-foreground"
                     }`}
                   >
                     <span className="whitespace-nowrap">{category}</span>

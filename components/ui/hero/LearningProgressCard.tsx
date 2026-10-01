@@ -52,18 +52,18 @@ export default function LearningProgressCard({
     <div
       className={`group/card select-none hover:[animation-play-state:paused] ${className}`}
     >
-      <div className={`bg-white flex flex-col gap-1.5 sm:gap-2.5 items-start p-3 xs:p-4 sm:p-5 lg:p-6 rounded-xl sm:rounded-[20px] ${
+      <div className={`bg-card flex flex-col gap-1.5 sm:gap-2.5 items-start p-3 xs:p-4 sm:p-5 lg:p-6 rounded-xl sm:rounded-[20px] ${
         hasCustomWidth ? "w-full" : "w-38 xs:w-46 sm:w-56 lg:w-64"
-      } max-w-full shadow-xl shadow-blue-950/10 border border-white/80 transition-all duration-300 ease-out hover:-translate-y-1.5 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-950/20 hover:border-secondary/40 active:scale-[0.98] cursor-pointer`}>
+      } max-w-full shadow-xl shadow-blue-950/10 border border-card-border transition-all duration-300 ease-out hover:-translate-y-1.5 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-950/20 hover:border-secondary/40 active:scale-[0.98] cursor-pointer`}>
         <div className="flex items-center justify-between w-full">
-          <p className="font-satoshi font-medium text-zinc-600 text-[11px] xs:text-xs sm:text-sm lg:text-base leading-tight whitespace-nowrap group-hover/card:text-zinc-900 transition-colors duration-200">
+          <p className="font-satoshi font-medium text-muted-foreground text-[11px] xs:text-xs sm:text-sm lg:text-base leading-tight whitespace-nowrap group-hover/card:text-heading transition-colors duration-200">
             Learning Progress
           </p>
         </div>
-        <p className="font-heading font-semibold text-zinc-950 text-2xl xs:text-3xl sm:text-4xl lg:text-5xl leading-none tracking-tight group-hover/card:scale-105 origin-left transition-transform duration-300 tabular-nums">
+        <p className="font-heading font-semibold text-heading text-2xl xs:text-3xl sm:text-4xl lg:text-5xl leading-none tracking-tight group-hover/card:scale-105 origin-left transition-transform duration-300 tabular-nums">
           {count}%
         </p>
-        <div className="w-full h-1.5 sm:h-2.5 lg:h-3 bg-zinc-100 rounded-full overflow-hidden mt-0.5 relative">
+        <div className="w-full h-1.5 sm:h-2.5 lg:h-3 bg-surface rounded-full overflow-hidden mt-0.5 relative">
           <div
             className="h-full bg-secondary rounded-full transition-all duration-1000 ease-out relative overflow-hidden"
             style={{ width: `${displayedProgress}%` }}
@@ -72,7 +72,7 @@ export default function LearningProgressCard({
             aria-valuemin={0}
             aria-valuemax={100}
           >
-            <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/50 to-transparent animate-shimmer-sweep pointer-events-none" />
+            <div className="absolute inset-0 bg-linear-to-r from-transparent via-primary-foreground/50 to-transparent animate-shimmer-sweep pointer-events-none" />
           </div>
         </div>
       </div>

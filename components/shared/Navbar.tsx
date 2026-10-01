@@ -16,14 +16,14 @@ const NAV_LINKS: NavItem[] = [
   { label: "Creators", href: "#creators" },
 ];
 
-const AUTH_LINKS: NavItem[] = [
-  { label: "Sign In", href: "/login" },
-  { label: "Join Us", href: "/signup" },
-];
-
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (prevPathname !== pathname) {
+    setPrevPathname(pathname);
+    setMenuOpen(false);
+  }
 
   // Close mobile menu on ESC key
   const handleKeyDown = useCallback(
@@ -39,11 +39,6 @@ export default function Navbar() {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [handleKeyDown]);
-
-  // Close mobile menu when pathname changes
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [pathname]);
 
   // Hide global navbar on standalone auth pages (login / signup)
   if (pathname === "/login" || pathname === "/signup") {
@@ -82,7 +77,7 @@ export default function Navbar() {
                 href={item.href}
                 className={`font-satoshi text-base transition-colors duration-150 relative py-1 ${
                   isHome
-                    ? "text-white font-medium"
+                    ? "text-nav-text font-medium"
                     : "text-nav-text hover:text-secondary font-normal"
                 }`}
               >
@@ -103,7 +98,7 @@ export default function Navbar() {
 
           <Link
             href="/signup"
-            className="text-white font-satoshi hover:text-secondary px-6 h-12 rounded-full flex items-center justify-center text-base transition-colors duration-150"
+            className="text-nav-text font-satoshi hover:text-secondary px-6 h-12 rounded-full flex items-center justify-center text-base transition-colors duration-150"
           >
             Join Us
           </Link>
@@ -145,7 +140,7 @@ export default function Navbar() {
           <>
             {/* Backdrop click to dismiss */}
             <div
-              className="fixed inset-0 bg-black/40 backdrop-blur-xs z-40 md:hidden"
+              className="fixed inset-0 bg-surface-dark/40 backdrop-blur-xs z-40 md:hidden"
               onClick={() => setMenuOpen(false)}
               aria-hidden="true"
             />
@@ -172,7 +167,7 @@ export default function Navbar() {
                 <Link
                   href="/signup"
                   onClick={() => setMenuOpen(false)}
-                  className="bg-secondary hover:bg-secondary-hover text-footer-text font-satoshi font-bold px-5 py-2.5 rounded-full text-center transition-colors text-base mt-1"
+                  className="bg-secondary hover:bg-secondary-hover text-secondary-foreground font-satoshi font-bold px-5 py-2.5 rounded-full text-center transition-colors text-base mt-1"
                 >
                   Join Us
                 </Link>
