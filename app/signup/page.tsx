@@ -48,10 +48,10 @@ export default function SignupPage() {
         <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,475fr)_minmax(0,579fr)] lg:gap-x-[12%]">
           {/* Left Column: Heading, Subtitle & Course Artwork Cluster */}
           <section className="relative text-nav-text">
-            <h2 className="font-heading text-[20px] font-semibold leading-[1.2] tracking-[-0.2px]">
+            <h2 className="font-heading text-xl font-semibold leading-tight tracking-[-0.2px]">
               Sign up and come in
             </h2>
-            <p className="mt-4 max-w-118.75 text-[18px] leading-[1.6] text-hero-muted/90 font-normal">
+            <p className="mt-4 max-w-118.75 text-lg leading-tight text-hero-muted/90 font-normal">
               The registration process is straightforward, uncomplicated, and
               efficient, allowing users to sign up quickly, easily, and at no
               cost
@@ -67,12 +67,12 @@ export default function SignupPage() {
             className="flex min-h-162.5 flex-col rounded-3xl bg-card px-7 pt-10 pb-10 sm:px-[10.88%] sm:pt-15.25 lg:min-h-196 shadow-2xl border border-card-border"
           >
             <div>
-              <p className="text-[18px] leading-[1.6] text-primary font-medium">
+              <p className="text-lg leading-tight text-primary font-medium">
                 Create an Account
               </p>
               <h1
                 id="auth-title"
-                className="font-heading text-[clamp(32px,3.06vw,44px)] font-semibold leading-[1.2] tracking-[-0.44px] text-heading mt-1"
+                className="font-heading text-[clamp(32px,3.06vw,44px)] font-semibold leading-tight tracking-[-0.44px] text-heading mt-1"
               >
                 Welcome to <br />
                 ByteSpace
@@ -89,7 +89,7 @@ export default function SignupPage() {
               <div className="flex w-full flex-col gap-2">
                 <label
                   htmlFor="fullName"
-                  className="text-[14px] font-medium leading-[1.2] text-heading"
+                  className="text-sm font-medium leading-tight text-heading"
                 >
                   Full Name
                 </label>
@@ -110,7 +110,7 @@ export default function SignupPage() {
               <div className="flex w-full flex-col gap-2">
                 <label
                   htmlFor="email"
-                  className="text-[14px] font-medium leading-[1.2] text-heading"
+                  className="text-sm font-medium leading-tight text-heading"
                 >
                   Email
                 </label>
@@ -131,7 +131,7 @@ export default function SignupPage() {
               <div className="flex w-full flex-col gap-2">
                 <label
                   htmlFor="password"
-                  className="text-[14px] font-medium leading-[1.2] text-heading"
+                  className="text-sm font-medium leading-tight text-heading"
                 >
                   Password
                 </label>
@@ -163,7 +163,7 @@ export default function SignupPage() {
               </div>
             </form>
 
-            <p className="mt-auto pt-16 text-center text-[16px] leading-[1.6] text-muted">
+            <p className="mt-auto pt-16 text-center text-base leading-tight text-muted">
               Already have an account?{" "}
               <Link
                 href="/login"
