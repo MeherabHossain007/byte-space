@@ -4,6 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Input from "@/components/ui/Input";
+import Button from "@/components/ui/Button";
 
 interface FooterLink {
   label: string;
@@ -71,7 +73,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-background text-footer-text font-satoshi pt-16 sm:pt-20 pb-12 w-full">
-      <div className="max-w-360 mx-auto px-6 sm:px-12 lg:px-30">
+      <div className="max-w-360 mx-auto px-6 sm:px-12 lg:px-30 2xl:px-0">
         {/* Top Section */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
           {/* Left Column: Brand & Newsletter */}
@@ -101,20 +103,22 @@ export default function Footer() {
             {/* Newsletter Subscription Form */}
             <form onSubmit={handleSubmit} className="pt-2">
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 max-w-md">
-                <input
+                <Input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
                   required
-                  className="w-full bg-input border border-input-border rounded-full px-5 py-3 text-sm text-heading placeholder:text-input-placeholder focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                  containerClassName="w-full"
                 />
-                <button
+                <Button
                   type="submit"
-                  className="bg-secondary hover:bg-secondary-hover active:scale-95 text-secondary-foreground font-bold px-8 py-3 rounded-full text-sm transition-all shadow-xs shrink-0 cursor-pointer text-center"
+                  variant="secondary"
+                  size="lg"
+                  className="px-8 text-sm"
                 >
                   {submitted ? "Subscribed" : "Search"}
-                </button>
+                </Button>
               </div>
 
               {/* Legal Notice */}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import CourseCard from "@/components/ui/CourseCard";
+import CourseCard from "@/components/ui/cards/CourseCard";
 
 interface CourseItem {
   id: string;
@@ -131,12 +131,7 @@ const CATEGORY_ROWS = [
     "Graphic Design",
     "Photography",
   ],
-  [
-    "Productivity",
-    "Web Development",
-    "Data Science",
-    "Cooking",
-  ],
+  ["Productivity", "Web Development", "Data Science", "Cooking"],
 ];
 
 export default function CourseCatalog() {
@@ -148,11 +143,10 @@ export default function CourseCatalog() {
       : COURSES.filter(
           (c) =>
             c.category.toLowerCase() === activeCategory.toLowerCase() ||
-            c.title.toLowerCase().includes(activeCategory.toLowerCase())
+            c.title.toLowerCase().includes(activeCategory.toLowerCase()),
         );
 
-  const displayCourses =
-    filteredCourses.length > 0 ? filteredCourses : COURSES;
+  const displayCourses = filteredCourses.length > 0 ? filteredCourses : COURSES;
 
   return (
     <section
@@ -168,9 +162,10 @@ export default function CourseCatalog() {
             Build Your Skills
           </h2>
           <p className="font-satoshi font-normal text-muted text-sm sm:text-base lg:text-lg leading-relaxed max-w-3xl mx-auto px-2">
-            At Bytespace Courses, we bring you closer to life-changing knowledge.
-            Explore a variety of courses across different fields, from technology
-            to the arts, and make a difference in your career and life.
+            At Bytespace Courses, we bring you closer to life-changing
+            knowledge. Explore a variety of courses across different fields,
+            from technology to the arts, and make a difference in your career
+            and life.
           </p>
         </div>
 

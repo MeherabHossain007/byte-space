@@ -36,7 +36,7 @@ const PARTNER_LOGOS = [
 export default function PartnersSection() {
   return (
     <section className="partners-section bg-surface py-12 sm:py-16 lg:py-20 overflow-hidden">
-      <div className="flex gap-8 sm:gap-12 lg:gap-18 items-center justify-center flex-wrap px-6 max-w-360 mx-auto">
+      <div className="flex gap-8 sm:gap-12 lg:gap-23 2xl:justify-between items-center justify-center flex-wrap max-w-360 mx-auto">
         {PARTNER_LOGOS.map((logo, i) => (
           <div key={i} className="h-8 sm:h-10.25 shrink-0 flex items-center justify-center">
             <Image
