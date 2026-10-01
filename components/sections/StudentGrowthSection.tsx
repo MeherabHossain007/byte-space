@@ -1,7 +1,7 @@
 import Image from "next/image";
-import CourseCard from "../ui/CourseCard";
-import LearningProgressCard from "../ui/hero/LearningProgressCard";
-import HappyStudentsCard from "../ui/hero/HappyStudentsCard";
+import CourseCard from "../ui/cards/CourseCard";
+import LearningProgressCard from "../ui/cards/LearningProgressCard";
+import HappyStudentsCard from "../ui/cards/HappyStudentsCard";
 
 const benefits = [
   "Share Your Expertise",

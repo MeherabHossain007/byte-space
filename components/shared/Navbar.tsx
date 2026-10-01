@@ -48,7 +48,7 @@ export default function Navbar() {
   return (
     <header className="w-full absolute top-0 left-0 right-0 z-40 bg-transparent">
       <nav
-        className="site-nav relative z-10 flex items-center justify-between px-6 sm:px-0 lg:px-30 h-20 lg:h-30 max-w-360 mx-auto w-full"
+        className="site-nav relative z-10 flex items-center justify-between px-6 sm:px-14 lg:px-30 2xl:px-0 h-20 lg:h-30 max-w-360 mx-auto w-full"
         aria-label="Main Navigation"
       >
         {/* Brand Logo */}

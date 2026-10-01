@@ -3,9 +3,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import { MdSearch } from "react-icons/md";
-import LearningProgressCard from "@/components/ui/hero/LearningProgressCard";
-import HappyStudentsCard from "@/components/ui/hero/HappyStudentsCard";
-import UiUxDesignCard from "@/components/ui/hero/UiUxDesignCard";
+import LearningProgressCard from "@/components/ui/cards/LearningProgressCard";
+import HappyStudentsCard from "@/components/ui/cards/HappyStudentsCard";
+import UiUxDesignCard from "@/components/ui/cards/UiUxDesignCard";
 import Input from "@/components/ui/Input";
 import Button from "@/components/ui/Button";
 
@@ -56,7 +56,8 @@ export default function HeroSection() {
         <div className="hero-content relative z-10 flex flex-col items-center text-center px-4 pt-4 sm:pt-8 lg:pt-12 gap-6 sm:gap-10 lg:gap-14 w-full max-w-7xl mx-auto">
           <div className="w-full flex flex-col justify-center items-center text-center gap-4 sm:gap-6 lg:gap-8 mx-auto">
             <h1 className="font-heading font-bold text-primary-foreground text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.15] sm:leading-tight tracking-tight w-full max-w-4xl text-center mx-auto">
-              Get Access to Hundreds <br className="hidden sm:inline" /> Courses Available
+              Get Access to Hundreds <br className="hidden sm:inline" /> Courses
+              Available
             </h1>
             <p className="font-satoshi font-normal text-hero-muted text-sm sm:text-base lg:text-lg leading-relaxed w-full max-w-xl sm:max-w-3xl lg:max-w-4xl text-center mx-auto px-2">
               Unlock your creativity, gain valuable knowledge, and grow your
@@ -74,7 +75,10 @@ export default function HeroSection() {
             <Input
               type="search"
               icon={
-                <MdSearch className="w-5 h-5 sm:w-6 sm:h-6 shrink-0" aria-hidden="true" />
+                <MdSearch
+                  className="w-5 h-5 sm:w-6 sm:h-6 shrink-0"
+                  aria-hidden="true"
+                />
               }
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -82,32 +86,28 @@ export default function HeroSection() {
               placeholder="Course, topic, creator"
               containerClassName="w-full sm:w-115 max-w-full"
             />
-            <Button type="submit" className="w-full sm:w-auto">Search</Button>
+            <Button type="submit" className="w-full sm:w-auto">
+              Search
+            </Button>
           </form>
         </div>
 
         {/* Hero image (person) */}
         <div className="hero-visual relative z-10 flex justify-center pb-0 px-2 sm:px-4 mt-6 sm:mt-8">
-          <div className="relative w-full max-w-85 sm:max-w-xl md:max-w-2xl lg:max-w-3xl flex justify-center items-end">
-            {/* Student Cutout/Portrait Image Container */}
+          <div className="relative w-fit max-w-full mx-auto flex justify-center items-end">
             <Image
               src="/images/hero-image.png"
               alt="Student"
-              width={1920}
-              height={1080}
+              width={608}
+              height={571}
               priority
-              style={{ transform: "translateX(3.2%)" }}
-              className="w-full h-auto object-contain select-none pointer-events-none relative z-10"
+              style={{ transform: "translateX(-5%)" }}
+              className="h-auto max-w-full object-contain select-none pointer-events-none relative z-10"
             />
 
-            {/* Learning Progress Card */}
-            <LearningProgressCard className="absolute top-[12%] sm:top-[14%] lg:top-[17%] right-0 sm:right-2 lg:right-4 z-20" />
-
-            {/* Happy Students Card */}
-            <HappyStudentsCard className="absolute bottom-[2%] sm:bottom-[6%] lg:bottom-[10%] left-0 sm:left-2 lg:left-4 z-20" />
-
-            {/* UI/UX Design Card */}
-            <UiUxDesignCard className="absolute top-[6%] sm:top-[14%] lg:top-[20%] left-0 sm:left-2 lg:left-6 z-20" />
+            <LearningProgressCard className="absolute top-[12%] sm:top-[14%] lg:top-[17%] -right-4 sm:-right-8 lg:-right-12 z-20" />
+            <HappyStudentsCard className="absolute bottom-[2%] sm:bottom-[6%] lg:bottom-[10%] -left-4 sm:-left-8 lg:-left-12 z-20" />
+            <UiUxDesignCard className="absolute top-[6%] sm:top-[14%] lg:top-[20%] -left-2 sm:-left-6 lg:-left-8 z-20" />
           </div>
         </div>
       </div>
